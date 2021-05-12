@@ -265,6 +265,10 @@ int main(int argc, char** argv)
 
 
 	// cleanup
+	if (sock) 
+	{
+		::closesocket(sock);
+	}
 	WSACleanup();
 
 }
